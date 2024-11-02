@@ -9,7 +9,9 @@ dotenv.config(); // Load environment variables
 
 const app = express();
 const server = http.createServer(app); // Initialize the server first
-
+app.use("/",(req,res)=>{
+    res.send("Server is running.");
+});
 // Initialize socket.io with the server
 initSocket(server);
 
